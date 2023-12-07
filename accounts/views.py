@@ -13,7 +13,7 @@ def register(request):
         username=request.POST("username")
         email=request.POST("email")
         password=request.POST("password")
-        confrim_password=request.POST("confrim_password")
+        confirm_password=request.POST("confirm_password")
         
         user=User.objects.create_user(firstname=firstname,lastname=lastname,username=username,email=email,password=password)
         user.save()
