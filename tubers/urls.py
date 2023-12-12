@@ -24,6 +24,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('webpages.urls')),
+    path('hiretubers/',include('hiretubers.urls')),
     path('youtubers/',include('youtubers.urls')),
     path('accounts/',include('accounts.urls')),
     

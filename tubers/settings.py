@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'youtubers.apps.YoutubersConfig',
+    'hiretubers.apps.HiretubersConfig',
     'webpages.apps.WebpagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
