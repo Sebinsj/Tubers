@@ -6,6 +6,7 @@ class Team(models.Model):
      lastname=models.CharField(max_length=255)
      role=models.CharField(max_length=255)
      fb_link=models.CharField(max_length=255)
+     linkedin_link=models.CharField(max_length=200,blank=True)
      insta_link=models.CharField(max_length=255)
      photo=models.ImageField(upload_to="media/team/%Y/%m/%d/")
      created_date=models.DateField(auto_now_add=True)
