@@ -2,6 +2,9 @@
 {%load static%}
 
 {% block content %}
+{% load socialaccount %}
+{% providers_media_js %}
+
 <main class="register container">
     <h1 class="text-center mt-5 mb-5">
       Register
@@ -41,7 +44,8 @@
           OR
         </div>
 
-        <button class="btn btn-primary form-btn w-100 mt-3">Facebook</button>
+         
+        <a href="{% provider_login_url 'facebook' %}" class="btn btn-primary form-btn w-100 mt-3">Facebook</a>
         <button class="btn btn-accent form-btn w-100 mt-3 mb-3">Google</button>
 
       </form>

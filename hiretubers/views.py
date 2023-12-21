@@ -24,4 +24,4 @@ def hiretuber(request):
     return redirect('youtubers')
 
 def home(request):
-    pass
+    return render(request,'webpages/home.html')
