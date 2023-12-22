@@ -95,8 +95,6 @@ LOGIN_REDIRECT_URL=['dashboard']
 SOCIAL_AUTH_FACEBOOK_KEY="733972524956381"
 SOCIAL_AUTH_FACEBOOK_SECRET="eb0ce6bb1ad4bf699cba49890df2ebd9"
 
-SOCIAL_AUTH_GOOGLE_KEY="34724170614-8e7teo9dr8vfid0ifguut9uun5n6qi2g.apps.googleusercontent.com"
-SOCIAL_AUTH_GOOGLE_SECRET="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"
 
 
 WSGI_APPLICATION = 'tubers.wsgi.application'
@@ -163,3 +161,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SITE_ID=2
 
+SOCIALACCOUNT_PROVIDERS={
+    "google":{
+        "SCOPE":[
+            "profile",
+            "email"
+        ],
+        "AUTH_PARAMS":{"access_types":"online"}
+    }
+}
