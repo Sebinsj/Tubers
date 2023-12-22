@@ -28,18 +28,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_REDIRECT_URL=['dashboard']
-LOGOUT_REDIRECT_URL="/"
 
 # Application definition
 
 INSTALLED_APPS = [
+    'hiretubers.apps.HiretubersConfig',
     'accounts.apps.AccountsConfig',
     'youtubers.apps.YoutubersConfig',
-    'hiretubers.apps.HiretubersConfig',
     'webpages.apps.WebpagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -49,8 +48,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
-    'django.contrib.sites',
-    'ckeditor'
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +61,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
 ]
+
+
 
 ROOT_URLCONF = 'tubers.urls'
 
@@ -81,6 +81,20 @@ TEMPLATES = [
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = [
+    
+    
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+    
+]
+
+LOGIN_REDIRECT_URL=['dashboard']
+
+SOCIAL_AUTH_FACEBOOK_KEY="733972524956381"
+SOCIAL_AUTH_FACEBOOK_SECRET="eb0ce6bb1ad4bf699cba49890df2ebd9"
+
 
 WSGI_APPLICATION = 'tubers.wsgi.application'
 
@@ -144,5 +158,5 @@ STATICFILES_DIRS=[
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-SITE_ID=1
+SITE_ID=2
 
