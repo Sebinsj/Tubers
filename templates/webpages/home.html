@@ -53,7 +53,9 @@
 
         <div class="card border-0 text-center ml-3 mr-3">
           <div class="feature-text">
+            <a href="{% url 'youtubers_detail' fy.id %}">
             <img src="{{fy.photo.url}}" class="card-img-top" alt="team-member">
+            </a>
             <span class="text-left bg-accent font-weight-bold">
               Featured
             </span>
@@ -106,7 +108,9 @@
         {% for at in all_tubers %}
         <div class="card border-0 text-center">
           <div>
+            <a href="{% url 'youtubers_detail' at.id %}">
             <img src="{{at.photo.url}}" class="card-img-top" alt="team-member">
+          </a>
 
           </div>
           <div class="card-body">
