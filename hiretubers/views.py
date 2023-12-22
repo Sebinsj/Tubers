@@ -23,5 +23,3 @@ def hiretuber(request):
     messages.success(request,'thanks for reaching out')
     return redirect('youtubers')
 
-def home(request):
-    return render(request,'webpages/home.html')

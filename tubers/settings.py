@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL=['dashboard']
+LOGOUT_REDIRECT_URL="/"
 
 # Application definition
 
@@ -144,3 +145,4 @@ STATICFILES_DIRS=[
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SITE_ID=1
+
