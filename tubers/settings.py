@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'youtubers.apps.YoutubersConfig',
     'webpages.apps.WebpagesConfig',
+    'contactpage.apps.ContactpageConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.sites',
