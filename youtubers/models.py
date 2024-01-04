@@ -45,4 +45,5 @@ class Youtuber(models.Model):
     subs_count=models.CharField(max_length=255)
     category=models.CharField(choices=category_choices,max_length=255)
     is_featured=models.BooleanField(default=False)
+    
     created_date=models.DateTimeField(default=datetime.now,blank= True)

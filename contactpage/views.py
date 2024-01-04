@@ -13,7 +13,7 @@ def contact(request):
         message=request.POST['message']
         user_id=request.POST['user_id']
     
-    #santitization    
+       
 
     contact=Contact(fullname=fullname,phone=phone,email=email,company=company,subject=subject,message=message,user_id=user_id)
 
