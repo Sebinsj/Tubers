@@ -3,8 +3,8 @@ from datetime import datetime
 
 # Create your models here.
 class Hiretuber(models.Model):
-    first_name=models.CharField(max_length=100)
-    last_name=models.CharField(max_length=100)
+    firstname=models.CharField(max_length=100)
+    lastname=models.CharField(max_length=100)
     tuber_id=models.IntegerField()
     tuber_name=models.CharField(max_length=100)
     email=models.CharField(max_length=200)

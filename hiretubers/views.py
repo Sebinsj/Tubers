@@ -4,8 +4,8 @@ from django.contrib import messages
 # Create your views here.
 def hiretuber(request):
     if request.method=='POST':
-        first_name=request.POST['first_name']
-        last_name=request.POST['last_name']
+        firstname=request.POST['firstname']
+        lastname=request.POST['lastname']
         tuber_id=request.POST['tuber_id']
         tuber_name=request.POST['tuber_name']
         email=request.POST['email']
