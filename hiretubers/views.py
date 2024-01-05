@@ -17,7 +17,7 @@ def hiretuber(request):
     
     #santitization    
 
-    hiretuber=Hiretuber(first_name=first_name,last_name=last_name,tuber_id=tuber_id,tuber_name=tuber_name,email=email,city=city,phone=phone,state=state,message=message,user_id=user_id)
+    hiretuber=Hiretuber(firstname=firstname,lastname=lastname,tuber_id=tuber_id,tuber_name=tuber_name,email=email,city=city,phone=phone,state=state,message=message,user_id=user_id)
 
     hiretuber.save()
     messages.success(request,'thanks for reaching out')
