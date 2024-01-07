@@ -4,6 +4,8 @@ from django.contrib import messages
 # Create your views here.
 
 def contact(request):
+    if request.method=='GET':
+        return render(request,'webpages/contact.html')
     if request.method=='POST':
         fname=request.POST['fname']
         phone=request.POST['phone']
@@ -19,7 +21,7 @@ def contact(request):
     
        
 
-    messages.success(request,'thanks for reaching out')
+    
     return redirect('home')
 
 
