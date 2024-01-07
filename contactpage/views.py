@@ -5,21 +5,22 @@ from django.contrib import messages
 
 def contact(request):
     if request.method=='POST':
-        fullname=request.POST['fullname']
+        fname=request.POST['fname']
         phone=request.POST['phone']
         email=request.POST['email']
         company=request.POST['company']
         subject=request.POST['subject']
         message=request.POST['message']
-        user_id=request.POST['user_id']
+        contact=Contact(fname=fname,phone=phone,email=email,company=company,subject=subject,message=message)
+
+        contact.save()
+        messages.success(request,'thanks for reaching out')
+        
     
        
 
-    contact=Contact(fullname=fullname,phone=phone,email=email,company=company,subject=subject,message=message,user_id=user_id)
-
-    contact.save()
     messages.success(request,'thanks for reaching out')
-    return redirect('contact')
+    return redirect('home')
 
 
 

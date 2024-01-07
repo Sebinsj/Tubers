@@ -4,9 +4,9 @@ from .models import Contact
 
 class ContactAdmin(admin.ModelAdmin):
     
-    list_display=('fullname','email',)
-    list_display_links=("fullname",'email',)
-    search_fields=("fullname","email",)
+    list_display=('fname','email',)
+    list_display_links=("fname",'email',)
+    search_fields=("fname","email",)
     list_filter=()
 # Register your models here.
 
